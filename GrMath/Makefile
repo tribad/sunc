@@ -1,0 +1,40 @@
+################################################################################################################
+##
+##  Makefile for grmath.so
+##
+##  Copyrights by Hans-Juergen Lange <hjl@simulated-universe.de>. All rights reserved.
+##
+################################################################################################################
+PROJ=grmath
+
+SRC=\
+    CMatrix.cpp\
+    CVector.cpp
+
+OBJ=\
+    CMatrix.o\
+    CVector.o
+
+CXXFLAGS+=-std=gnu++0x -fPIC -g
+
+
+all : $(PROJ)
+
+$(PROJ) : lib$(PROJ).so lib$(PROJ).a
+
+lib$(PROJ).so : $(OBJ)
+	g++ -shared $(CXXFLAGS) $(OBJ) -o $@
+
+lib$(PROJ).a : $(OBJ)
+	ar cr $@ $(OBJ)
+
+depend : $(SRC)
+	g++ $(CXXFLAGS) -M $(SRC) > depend
+
+clean:
+	rm -f $(PROJ)
+	rm -f depend
+	rm -f $(OBJ)
+
+-include depend
+
