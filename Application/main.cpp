@@ -13,12 +13,11 @@
 //----------+---------+-----------------------------------------------------------------------------------------
 //          |         |
 // HOC end *****************************************************************************************************
-#include <SDL2>
-#include "main.h"
-// Optional
+#include <SDL2/SDL.h>
 #include "../Thread/CApplication.h"
 #include "CSDLApplication.h"
-#include "SDL_Event*.h"
+#include "main.h"
+// Optional
 CSDLApplication* sunc;
 int main(int argc, char* argv[]) {
     int retval;

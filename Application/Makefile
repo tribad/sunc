@@ -17,16 +17,18 @@ OBJ=\
 
 CXXFLAGS+=-std=c++14 -fPIC -g $(INCLUDEPATH)
 
-STATICLIBS=
+STATICLIBS=\
+     -lrender\
+     -lgrmath\
+     -lthread
 
 DYNLIBS=\
      -lSDL2\
-     -lrender\
-     -lOpenGL\
-     -lthread
+     -lOpenGL
 
 LIBPATH=\
      -L../Renderer\
+     -L../GrMath\
      -L../Thread
 
 INCLUDEPATH=

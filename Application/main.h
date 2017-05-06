@@ -16,10 +16,7 @@
 #pragma once
 #ifndef MAIN_INC
 #define MAIN_INC
-//
-//  List of forwards needed in this module.
-class CSDLApplication;
-extern extern CSDLApplication* sunc;
+extern CSDLApplication* sunc;
 int main(int argc, char* argv[]) ;
 
 

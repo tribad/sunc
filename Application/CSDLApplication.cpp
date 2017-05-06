@@ -13,11 +13,11 @@
 //----------+---------+-----------------------------------------------------------------------------------------
 //          |         |
 // HOC end *****************************************************************************************************
-#include <SDL2>
+#include <SDL2/SDL.h>
 #include "../Thread/CApplication.h"
 #include "CSDLApplication.h"
 // Optional
-#include "SDL_Event*.h"
+#include "main.h"
 bool CSDLApplication::InitInstance(const int argc, char* argv[]) {
     bool retval = false;
 // User-Defined-Code:AAAAAAFbzUKRnpRtfi0=
