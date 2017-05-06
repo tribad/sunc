@@ -5,17 +5,12 @@
 //  Copyrights by Hans-Juergen Lange <hjl@simulated-universe.de>. All rights reserved.
 //
 // *************************************************************************************************************
-// HOC *********************************************************************************************************
-//          |         |
-// YYYYMMDD | Creator | description
-//--------------------------------------------------------------------------------------------------------------
-//          |         |
-//----------+---------+-----------------------------------------------------------------------------------------
-//          |         |
-// HOC end *****************************************************************************************************
 #pragma once
 #ifndef CSDLAPPLICATION_INC
 #define CSDLAPPLICATION_INC
+//
+//  List of forwards needed in this module.
+class CWorld;
 //
 //  This is the class
 class CSDLApplication : public CApplication {
@@ -24,6 +19,10 @@ public:
     int Run(void) ;
     void ExitInstance(void) ;
     void DefaultEventHandler(const SDL_Event* aEvent) ;
+private:
+    SDL_Window*   MainWindow;
+    SDL_GLContext GLContext;
+    CRenderer     Renderer;
 };
 
 #endif  // CSDLAPPLICATION_INC

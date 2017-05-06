@@ -2,6 +2,8 @@ PROJ=sunc
 
 SUBSYS=GrMath Thread Renderer Application
 
+CXXFLAGS=-DGL_GLEXT_PROTOTYPES
+
 .PHONY: $(SUBSYS)
 
 all : $(SUBSYS)
@@ -13,3 +15,7 @@ endef
 
 $(foreach part, $(SUBSYS), $(eval $(call SUBSYS_template, $(part))))
 
+clean:
+	$(foreach part, $(SUBSYS), $(MAKE) -C $(part) clean && ) true
+
+export CXXFLAGS
