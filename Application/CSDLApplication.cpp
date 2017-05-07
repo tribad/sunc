@@ -26,7 +26,7 @@ bool CSDLApplication::InitInstance(const int argc, char* argv[]) {
 // User-Defined-Code:AAAAAAFbzUKRnpRtfi0=
 
     retval = (SDL_Init(SDL_INIT_VIDEO) == 0);
-
+    Debug = 0x0001;
     if (retval) {
         SDL_DisplayMode dm;
         SDL_GetDesktopDisplayMode(0, &dm);
