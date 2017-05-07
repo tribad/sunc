@@ -15,6 +15,8 @@ public:
     void Draw(void) ;
 public:
     std::map<std::string, CShader> VertexShader;
+    std::map<std::string, CShader> FragmentShader;
+    std::map<std::string, CShader> GeometryShader;
 };
 
 #endif  // CPART_INC
