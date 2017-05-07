@@ -8,10 +8,12 @@
 PROJ=thread
 
 SRC=\
-    CApplication.cpp
+    CApplication.cpp\
+    CThread.cpp
 
 OBJ=\
-    CApplication.o
+    CApplication.o\
+    CThread.o
 
 CXXFLAGS+=-std=gnu++0x -fPIC -g
 

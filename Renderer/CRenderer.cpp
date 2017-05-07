@@ -5,16 +5,20 @@
 //  Copyrights by Hans-Juergen Lange <hjl@simulated-universe.de>. All rights reserved.
 //
 // *************************************************************************************************************
+#include <pthread.h>
+#include <SDL2/SDL.h>
 #include <GL/gl.h>
-#include <GL/glext.h>
 #include <string>
 #include <vector>
+#include <GL/glext.h>
+#include "../Thread/CThread.h"
 #include "../GrMath/CMatrix.h"
 #include "CPart.h"
 #include "CWorld.h"
 #include "CRenderer.h"
 // Optional
-void CRenderer::Init(void) {
+bool CRenderer::InitInstance(void) {
+    bool retval = true;
 // User-Defined-Code:AAAAAAFb3aPrawTtPyE=
     points = new float [9];
     points[0] = 0.0f;
@@ -26,6 +30,10 @@ void CRenderer::Init(void) {
     points[6] = -0.5f;
     points[7] = -0.5f;
     points[8] = 0.0f;
+
+    if (Window != 0) {
+        GLContext = SDL_GL_CreateContext(Window);
+    }
 
     vbo = 0;
     glGenBuffers(1, &vbo);
@@ -67,15 +75,28 @@ void CRenderer::Init(void) {
     glLinkProgram(shader_programme);
 
 // End-Of-UDC:AAAAAAFb3aPrawTtPyE=
+    return  (retval);
 }
 
-void CRenderer::Draw(void) {
+int CRenderer::Run(void) {
+    int retval = 0;
 // User-Defined-Code:AAAAAAFb3aQYswUYq6c=
-    glUseProgram(shader_programme);
-    glBindVertexArray(vao);
-    // draw points 0-3 from the currently bound VAO with current in-use shader
-    glDrawArrays(GL_TRIANGLES, 0, 3);
-
+    for (;;) {
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        glUseProgram(shader_programme);
+        glBindVertexArray(vao);
+        // draw points 0-3 from the currently bound VAO with current in-use shader
+        glDrawArrays(GL_TRIANGLES, 0, 3);
+        SDL_GL_SwapWindow(Window);
+    }
 // End-Of-UDC:AAAAAAFb3aQYswUYq6c=
+    return  (retval);
+}
+
+void CRenderer::Create(SDL_Window* aWnd) {
+// User-Defined-Code:AAAAAAFb4eVaoKAAllA=
+    Window = aWnd;
+    CThread::Create();
+// End-Of-UDC:AAAAAAFb4eVaoKAAllA=
 }
 

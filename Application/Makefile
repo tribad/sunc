@@ -24,7 +24,8 @@ STATICLIBS=\
 
 DYNLIBS=\
      -lSDL2\
-     -lOpenGL
+     -lOpenGL\
+     -lpthread
 
 LIBPATH=\
      -L../Renderer\

@@ -6,10 +6,13 @@
 //
 // *************************************************************************************************************
 #include <SDL2/SDL.h>
+#include <pthread.h>
 #include <GL/gl.h>
 #include <string>
 #include <vector>
+#include <GL/glext.h>
 #include "../Thread/CApplication.h"
+#include "../Thread/CThread.h"
 #include "../GrMath/CMatrix.h"
 #include "../Renderer/CPart.h"
 #include "../Renderer/CWorld.h"

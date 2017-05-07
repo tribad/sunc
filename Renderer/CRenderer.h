@@ -13,22 +13,25 @@
 class CWorld;
 //
 //  This is the class
-class CRenderer {
+class CRenderer : public CThread {
 public:
-    void Init(void) ;
-    void Draw(void) ;
+    bool InitInstance(void) ;
+    int Run(void) ;
+    void Create(SDL_Window* aWnd) ;
 public:
-    float*      points;
-    GLuint      vbo;
-    GLuint      vao;
-    std::string vertex_shader;
-    std::string fragment_shader;
-    GLuint      vs;
-    GLuint      fs;
-    GLuint      shader_programme;
+    float*        points;
+    GLuint        vbo;
+    GLuint        vao;
+    std::string   vertex_shader;
+    std::string   fragment_shader;
+    GLuint        vs;
+    GLuint        fs;
+    GLuint        shader_programme;
 private:
-    CWorld      World;
-    CMatrix     Projection;
+    SDL_GLContext GLContext;
+    SDL_Window*   Window;
+    CWorld        World;
+    CMatrix       Projection;
 };
 
 #endif  // CRENDERER_INC

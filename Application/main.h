@@ -11,6 +11,7 @@
 //
 //  List of forwards needed in this module.
 class CWorld;
+class CRenderer;
 extern CSDLApplication* sunc;
 int main(int argc, char* argv[]) ;
 

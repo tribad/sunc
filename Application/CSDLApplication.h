@@ -11,6 +11,7 @@
 //
 //  List of forwards needed in this module.
 class CWorld;
+class CRenderer;
 //
 //  This is the class
 class CSDLApplication : public CApplication {
@@ -20,9 +21,8 @@ public:
     void ExitInstance(void) ;
     void DefaultEventHandler(const SDL_Event* aEvent) ;
 private:
-    SDL_Window*   MainWindow;
-    SDL_GLContext GLContext;
-    CRenderer     Renderer;
+    SDL_Window* MainWindow;
+    CRenderer   Renderer;
 };
 
 #endif  // CSDLAPPLICATION_INC
