@@ -11,6 +11,7 @@
 #include <string>
 #include <vector>
 #include <GL/glext.h>
+#include <iostream>
 #include "../Thread/CApplication.h"
 #include "../Thread/CThread.h"
 #include "../GrMath/CMatrix.h"

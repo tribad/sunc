@@ -65,8 +65,9 @@ public:
     void OnUserEvent7(SDL_Event* aEvent) ;
     void OnWindowEvent(SDL_Event* aEvent) ;
 private:
-    SDL_Window* MainWindow;
-    CRenderer   Renderer;
+    SDL_Window*  MainWindow;
+    unsigned int Debug;
+    CRenderer    Renderer;
 };
 
 #endif  // CSDLAPPLICATION_INC
