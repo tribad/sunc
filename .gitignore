@@ -1,4 +1,13 @@
 .*
+*.bak
+depend
+sunc
+sunc.config
+sunc.creator
+sunc.creator.user
+sunc.files
+sunc.includes
+
 # Compiled Object files
 *.slo
 *.lo

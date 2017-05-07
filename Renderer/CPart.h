@@ -1,24 +1,19 @@
 // *************************************************************************************************************
 //
-//  Modul-Name     : CApplication.h
+//  Modul-Name     : CPart.h
 //
 //  Copyrights by Hans-Juergen Lange <hjl@simulated-universe.de>. All rights reserved.
 //
 // *************************************************************************************************************
 #pragma once
-#ifndef CAPPLICATION_INC
-#define CAPPLICATION_INC
+#ifndef CPART_INC
+#define CPART_INC
+//
+//  List of forwards needed in this module.
+class CWorld;
 //
 //  This is the class
-class CApplication {
-public:
-    CApplication() ;
-    virtual ~CApplication() ;
-    virtual bool InitInstance(const int argc, char* argv[]) ;
-    virtual int Run(void) ;
-    virtual void ExitInstance(void) ;
-public:
-    bool Running;
+class CPart : public CMatrix {
 };
 
-#endif  // CAPPLICATION_INC
+#endif  // CPART_INC

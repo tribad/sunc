@@ -1,19 +1,21 @@
 ################################################################################################################
 ##
-##  Makefile for thread.so
+##  Makefile for render.so
 ##
 ##  Copyrights by Hans-Juergen Lange <hjl@simulated-universe.de>. All rights reserved.
 ##
 ################################################################################################################
-PROJ=thread
+PROJ=render
 
 SRC=\
-    CApplication.cpp\
-    CThread.cpp
+    CRenderer.cpp\
+    CPart.cpp\
+    CWorld.cpp
 
 OBJ=\
-    CApplication.o\
-    CThread.o
+    CRenderer.o\
+    CPart.o\
+    CWorld.o
 
 CXXFLAGS+=-std=gnu++0x -fPIC -g
 

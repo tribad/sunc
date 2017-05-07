@@ -1,24 +1,18 @@
 // *************************************************************************************************************
 //
-//  Modul-Name     : CApplication.h
+//  Modul-Name     : CWorld.h
 //
 //  Copyrights by Hans-Juergen Lange <hjl@simulated-universe.de>. All rights reserved.
 //
 // *************************************************************************************************************
 #pragma once
-#ifndef CAPPLICATION_INC
-#define CAPPLICATION_INC
+#ifndef CWORLD_INC
+#define CWORLD_INC
 //
 //  This is the class
-class CApplication {
+class CWorld : public CMatrix {
 public:
-    CApplication() ;
-    virtual ~CApplication() ;
-    virtual bool InitInstance(const int argc, char* argv[]) ;
-    virtual int Run(void) ;
-    virtual void ExitInstance(void) ;
-public:
-    bool Running;
+    std::vector<CPart*> Part;
 };
 
-#endif  // CAPPLICATION_INC
+#endif  // CWORLD_INC
