@@ -9,11 +9,12 @@
 #ifndef CPART_INC
 #define CPART_INC
 //
-//  List of forwards needed in this module.
-class CWorld;
-//
 //  This is the class
 class CPart : public CMatrix {
+public:
+    void Draw(void) ;
+public:
+    std::map<std::string, CShader> VertexShader;
 };
 
 #endif  // CPART_INC

@@ -10,7 +10,6 @@
 #define CSDLAPPLICATION_INC
 //
 //  List of forwards needed in this module.
-class CWorld;
 class CRenderer;
 //
 //  This is the class

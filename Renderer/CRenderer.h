@@ -9,9 +9,6 @@
 #ifndef CRENDERER_INC
 #define CRENDERER_INC
 //
-//  List of forwards needed in this module.
-class CWorld;
-//
 //  This is the class
 class CRenderer : public CThread {
 public:

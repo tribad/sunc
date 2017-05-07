@@ -9,12 +9,14 @@
 #include <pthread.h>
 #include <GL/gl.h>
 #include <string>
+#include <map>
 #include <vector>
 #include <GL/glext.h>
 #include <iostream>
 #include "../Thread/CApplication.h"
 #include "../Thread/CThread.h"
 #include "../GrMath/CMatrix.h"
+#include "../Renderer/CShader.h"
 #include "../Renderer/CPart.h"
 #include "../Renderer/CWorld.h"
 #include "../Renderer/CRenderer.h"

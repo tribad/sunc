@@ -13,7 +13,6 @@
 #include <GL/glext.h>
 #include "../Thread/CThread.h"
 #include "../GrMath/CMatrix.h"
-#include "CPart.h"
 #include "CWorld.h"
 #include "CRenderer.h"
 // Optional

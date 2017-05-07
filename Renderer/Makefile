@@ -10,12 +10,14 @@ PROJ=render
 SRC=\
     CRenderer.cpp\
     CPart.cpp\
-    CWorld.cpp
+    CWorld.cpp\
+    CShader.cpp
 
 OBJ=\
     CRenderer.o\
     CPart.o\
-    CWorld.o
+    CWorld.o\
+    CShader.o
 
 CXXFLAGS+=-std=gnu++0x -fPIC -g
 

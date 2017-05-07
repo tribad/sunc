@@ -9,8 +9,13 @@
 #ifndef CWORLD_INC
 #define CWORLD_INC
 //
+//  List of forwards needed in this module.
+class CPart;
+//
 //  This is the class
 class CWorld : public CMatrix {
+public:
+    void Draw(void) ;
 public:
     std::vector<CPart*> Part;
 };
